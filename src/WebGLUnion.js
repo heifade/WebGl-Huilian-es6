@@ -15,10 +15,6 @@ export class WebGLUnion extends WebGLBase {
     this.addMovingPoints(); // 球外转动的点
 
     this.animate();
-
-    this.renderer.domElement.addEventListener("mousemove", (e) => {
-      this.mouseMove(e);
-    }, false);
   }
   addSphere() {
     this.turnGroup = new THREE.Object3D();
@@ -321,21 +317,16 @@ export class WebGLUnion extends WebGLBase {
     targetColor.b = color.b;
   }
 
-  mouseMove(e) {
-    let distance = this.distance(e.offsetX, e.offsetY, this.centerPoint.x, this.centerPoint.y);
-    let zoom = (this.width - distance * 2) / this.width * 15;
+  
 
-    this.turnGroup.position.z = zoom;
-    this.turnGroup.position.y = -zoom / 3
+  zoom(value) {
+    this.turnGroup.position.z = value;
+    this.turnGroup.position.y = -value / 3;
   }
 
   resize(width, height) {
     this.width = width;
     this.height = height;
-    this.centerPoint = { //中心点
-      x: this.width / 2,
-      y: this.height / 2,
-    }
     this.resizeDebounced();
   }
 
