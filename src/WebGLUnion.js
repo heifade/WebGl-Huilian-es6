@@ -74,7 +74,7 @@ export class WebGLUnion extends WebGLBase {
     let run = () => {
       this.turnGroup.rotation.y += 0.006;
       this.MeshPoint1.position.y = 10 * Math.cos(this.turnGroup.rotation.y);
-      this.MeshPoint2.position.y = -15 * Math.sin(this.turnGroup.rotation.y);
+      this.MeshPoint2.position.y = -10 * Math.sin(this.turnGroup.rotation.y);
       this.MeshPoint3.position.y = 10 * Math.sin(this.turnGroup.rotation.y);
       this.MeshPoint4.position.y = -20 * Math.cos(this.turnGroup.rotation.y);
 
@@ -84,10 +84,10 @@ export class WebGLUnion extends WebGLBase {
       this.MeshPoint8.position.y = -20 * Math.sin(this.turnGroup.rotation.y);
 
       this.MeshPoint9.position.y = 10 * Math.sin(this.turnGroup.rotation.y);
-      this.MeshPoint10.position.y = -15 * Math.cos(this.turnGroup.rotation.y);
+      this.MeshPoint10.position.y = -10 * Math.cos(this.turnGroup.rotation.y);
       this.MeshPoint11.position.y = 10 * Math.sin(this.turnGroup.rotation.y);
-      this.MeshPoint12.position.y = -15 * Math.cos(this.turnGroup.rotation.y);
-      this.MeshPoint13.position.y = -15 * Math.sin(this.turnGroup.rotation.y);
+      this.MeshPoint12.position.y = -10 * Math.cos(this.turnGroup.rotation.y);
+      this.MeshPoint13.position.y = -10 * Math.sin(this.turnGroup.rotation.y);
 
       this.addLines(); // 球外转动的点连线
       this.addLuminousPoints(); // 球上的点
@@ -107,7 +107,7 @@ export class WebGLUnion extends WebGLBase {
 
     this.MeshPoint5 = this.addMovingPoint(-29, -5, 10, '#158f82');
     this.MeshPoint6 = this.addMovingPoint(-30, -10, 0, '#158f82');
-    this.MeshPoint7 = this.addMovingPoint(-35, 10, 0, '#158f82');
+    this.MeshPoint7 = this.addMovingPoint(-30, 10, 0, '#158f82');
     this.MeshPoint8 = this.addMovingPoint(-20, 10, -10, '#158f82');
 
     this.MeshPoint9 = this.addMovingPoint(-10, 20, -20, '#158f82');
